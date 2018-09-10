@@ -13,3 +13,13 @@ Feature: Refund of item
       | cost | refund_amount |
       |  100 |            98 |
       |  150 |           125 |
+
+  Scenario Outline: User login to the portal
+    Given Application is opened
+    When User enters the <userName> and <password>
+    Then User should be able to login to the portal
+
+    Examples: 
+      | userName  | password  |
+      | userName1 | password1 |
+      | userName2 | password2 |
