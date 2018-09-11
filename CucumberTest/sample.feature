@@ -16,10 +16,12 @@ Feature: Refund of item
 
   Scenario Outline: User login to the portal
     Given Application is opened
-    When User enters the <userName> and <password>
+    When User enters the userName as "<user>" and password as "<pwd>"
     Then User should be able to login to the portal
 
     Examples: 
-      | userName  | password  |
-      | userName1 | password1 |
-      | userName2 | password2 |
+      | user  | pwd   |
+      | demo  | demo  |
+      | demo1 | demo1 |
+      | demo2 | demo2 |
+      | demo3 | demo3 |
